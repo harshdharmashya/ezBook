@@ -1,0 +1,17 @@
+.kir{
+    display: flex;
+    flex-wrap: wrap;
+}
+.inpemail{
+    border-radius: 5px;
+}
+.Books li{
+    color: white;
+    font-size: 1.3rem;
+}
+.Books h4{
+    color: white;
+}
+.height{
+    height: 55px;
+}

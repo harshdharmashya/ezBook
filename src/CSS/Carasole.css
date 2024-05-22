@@ -1,0 +1,47 @@
+body{
+    color: white;
+}
+.carousel1st{
+    margin: 2rem;
+    width: 25%;
+    margin-left: 150px;
+    height: 90vh;
+}
+.bgimg{
+    background-image: url(../images/bg\ img.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.headline{
+    padding: 10%;
+    padding-bottom: 0%;
+    font-size: 3.5rem;
+}
+.headline strong{
+    font-size: 80px;
+}
+.loremline{
+    padding: 1% 12%;
+}
+.imgcar{
+    height: 500px !important;
+    border-radius: 5px;
+}
+.d-flex{
+    padding: 0% 8%;
+    flex-wrap: wrap;
+}
+.search{
+    width: 310px;
+    margin-left: 15px;
+}
+.btn{
+    background-color: yellow;
+    color: black;
+    border: 1px solid black;
+}
+@media screen and (min-width:768px) and (max-width :1023px) {
+}

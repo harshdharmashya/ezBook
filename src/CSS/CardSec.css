@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Salsa", cursive;
+  font-family: "Ubuntu", sans-serif;
+  color: black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.newRele {
+  padding: 5% 5%;
+}
+
+.card {
+  width: 25rem;
+  margin: .5rem;
+  height: fit-content;
+  box-shadow: 5px 5px 15px grey;
+  cursor: pointer;
+
+}
+.cardsec {
+  width: 25rem;
+  margin: .8rem;
+  height: fit-content;
+  box-shadow: 5px 5px 15px grey;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.cardsec:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.Navbar {
+  width: 100wh;
+}
+
+.cardsec img {
+  height: 200px;
+  width: 200px;
+  display: block;
+  margin: auto;
+}
+.card img {
+  height: 200px;
+  width: 200px;
+  margin: 0.2rem;
+}

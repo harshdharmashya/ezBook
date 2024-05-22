@@ -1,0 +1,28 @@
+.flashseller{
+    width: 100%;
+    background: linear-gradient(rgb(233, 177, 9),rgb(213, 153, 42),rgb(214, 176, 60));
+    /* background-color: rgb(231, 179, 25); */
+    padding: 3% 5%;
+    position: relative;
+}
+.lorem{
+    margin: 3% 0%;
+}
+.div{
+    position: relative;
+}
+.viewbtn{
+    background-color: black;
+    color: white;
+    padding: 1% 5%;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgb(29, 28, 28);
+}
+.flashcarousel {
+    width: 50%;
+    margin-left: 150px;
+}
+.carousel-item img{
+    height: auto;
+    width: 100%;
+}

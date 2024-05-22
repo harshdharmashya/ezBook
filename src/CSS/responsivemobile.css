@@ -1,0 +1,47 @@
+@media screen and (max-width :768px) {
+    .loremline{
+        display: none;
+    }
+    .search{
+        margin: 3% auto;
+    }
+    .btn{
+        display: block;
+        margin: auto;
+    }
+    .carousel1st{
+        width: 75%;
+        display: block;
+        margin: 3% auto;
+        /* margin-left: auto; */
+        height: auto !important;
+    }
+    .carousel img{
+        height: auto;
+    }
+
+    /* Cardsec */
+
+    .cardsec {
+        width: 16rem;
+        display: block;
+        margin: 5% auto;
+    }
+
+    /* Bestseller */
+
+    .col-md-3{
+        margin: .3rem;
+
+    }
+
+    /* Flashseller */
+    .lorem{
+        margin: 0%;
+    }
+    .flashcarousel {
+        width: 100% !important;
+        margin-left: 0px !important;
+        margin: 3%;
+    }
+}

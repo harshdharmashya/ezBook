@@ -1,0 +1,25 @@
+.bestseller{
+    padding: .2rem 5%;
+}
+.cardsinbest{
+    margin: 5%;
+}
+.cardbestseller{
+    width: auto;
+}
+.cardbestseller img{
+    margin: 0px 2rem;
+    width: auto;
+}
+.cardbestseller:hover{
+    transform: scale(1.1);
+    transition: .7s;
+}
+.active{
+    cursor: pointer;
+}
+.active:hover{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
