@@ -28,11 +28,11 @@ export default function Footer() {
                     <h4>Tuesday-Friday:8am to 9pm</h4>
                     <h4>Saturday-Sunday:9am to 11pm</h4>
                     <h4>Closed Monday</h4>
-                    <div class="social_icons kir">
-                        <div><i class="fa-brands fa-facebook color text-white m-1"></i></div>
-                        <div><i class="fa-brands fa-instagram text-white m-1"></i></div>
-                        <div><i class="fa-brands fa-x-twitter text-white m-1"></i></div>
-                        <div><i class="fa-brands fa-threads text-white m-1"></i></div>
+                    <div className="social_icons kir">
+                        <div><i className="fa-brands fa-facebook color text-white m-1"></i></div>
+                        <div><i className="fa-brands fa-instagram text-white m-1"></i></div>
+                        <div><i className="fa-brands fa-x-twitter text-white m-1"></i></div>
+                        <div><i className="fa-brands fa-threads text-white m-1"></i></div>
                     </div >
                 </div >
                         

@@ -19,7 +19,7 @@ export default function Carousel() {
           <p className='loremline'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam fugiat, laboriosam vel dolor nam illum similique neque ullam animi possimus ex.</p>
           <form className="d-flex">
             <input className="form-control mx-4 search" type="search" placeholder="Search" aria-label="Search" />
-            <button className="btn btn-outline-success" type="submit" onClick={(e) => handleSearch(e)}>Search</button>
+            <button className="btn" type="submit" onClick={(e) => handleSearch(e)}>Search</button>
           </form>
         </div>
         <div id="carouselExampleControls col-md-6" className="carousel1st slide" data-bs-ride="carousel">
