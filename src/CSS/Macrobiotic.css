@@ -1,7 +1,15 @@
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
 .macro{
     padding: 5% 3% 0% 3%;
 }
 .cardsinmacro{
     margin: 3%;
     row-gap: 50px;
+}
+.btn-center{
+    display: block;
+    margin: auto;
 }
