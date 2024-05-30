@@ -14,7 +14,7 @@ export default function Macrobiotic(props) {
                 {
                     books.map((data, i) => (
                                 <div className="col-md-3"   key={i}>
-                                    <div className="card cardbestseller">
+                                    <div className="card cardbestseller" style={{backgroundColor:props.mode==='dark'?'#333333':'white'}}>
                                         <img src={data?.image} className="card-img-top" alt="..." />
                                         <div className="card-body">
                                             <h4 className="card-title">{data?.name}</h4>
@@ -27,6 +27,7 @@ export default function Macrobiotic(props) {
                     )
                     )
                 }
+                <hr />
                 </div>
 
                 {/* <div className="col-md-3">

@@ -4,8 +4,9 @@ import "../CSS/responsivemobile.css"
 import img1 from "../images/book 1 new release.jpg"
 import img2 from "../images/book 3 new release.jpeg"
 import img3 from "../images/book 4 new release.jpg"
+import img4 from "../images/mb3.jpg"
 
-export default function BestSeller() {
+export default function BestSeller(props) {
   return (
     <div>
       <div className='bestseller'>
@@ -21,7 +22,7 @@ export default function BestSeller() {
         </div>
         <div className="row cardsinbest">
           <div className="col-md-3">
-            <div className="card cardbestseller">
+            <div className="card cardbestseller" style={{backgroundColor:props.mode==='dark'?'#31363a':'white'}}>
               <img src={img1} className="card-img-top" alt="..." />
               <div className="card-body">
                 <h5 className="card-title">Name of Book</h5>
@@ -32,7 +33,7 @@ export default function BestSeller() {
             </div>
           </div>
           <div className="col-md-3">
-            <div className="card cardbestseller">
+            <div className="card cardbestseller" style={{backgroundColor:props.mode==='dark'?'#333333':'white'}}>
               <img src={img2} className="card-img-top" alt="..." />
               <div className="card-body">
                 <h5 className="card-title">Name of Book</h5>
@@ -43,7 +44,7 @@ export default function BestSeller() {
             </div>
           </div>
           <div className="col-md-3">
-            <div className="card cardbestseller">
+            <div className="card cardbestseller" style={{backgroundColor:props.mode==='dark'?'#333333':'white'}}>
               <img src={img3} className="card-img-top" alt="..." />
               <div className="card-body">
                 <h5 className="card-title">Name of Book</h5>
@@ -54,8 +55,8 @@ export default function BestSeller() {
             </div>
           </div>
           <div className="col-md-3">
-            <div className="card cardbestseller">
-              <img src={img2} className="card-img-top" alt="..." />
+            <div className="card cardbestseller" style={{backgroundColor:props.mode==='dark'?'#333333':'white'}}>
+              <img src={img4} className="card-img-top" alt="..." />
               <div className="card-body">
                 <h5 className="card-title">Name of Book</h5>
                 <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, sapiente.</p>

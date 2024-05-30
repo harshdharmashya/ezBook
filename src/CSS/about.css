@@ -1,0 +1,54 @@
+* {
+    text-decoration-line: none;
+}
+
+.about-harsh-and-albatross {
+    padding: 30px 0;
+}
+
+.responsive-text {
+    text-align: center;
+}
+
+.heading {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.paragraph {
+    font-size:medium;
+}
+
+.image-who-we-are {
+    padding: 5%;
+}
+
+.container {
+    width: 100%;
+}
+
+.image-container {
+    padding: 10px;
+    text-align: center;
+}
+
+.text-container strong{
+    font-size: xx-large;
+}
+
+img {
+    max-width: 100%;
+    height: 500px;
+}
+
+.about-albatross {
+    padding: 1% 9%;
+}
+
+
+@media screen and (max-width :768px) {
+    .lastpage {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

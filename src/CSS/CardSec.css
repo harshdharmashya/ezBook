@@ -4,7 +4,6 @@
   box-sizing: border-box;
   font-family: "Salsa", cursive;
   font-family: "Ubuntu", sans-serif;
-  color: black;
 }
 
 html {
@@ -19,7 +18,7 @@ html {
   width: 25rem;
   margin: .5rem;
   height: fit-content;
-  box-shadow: 5px 5px 15px grey;
+  box-shadow: 5px 5px 10px grey;
   cursor: pointer;
 
 }
@@ -27,7 +26,7 @@ html {
   width: 25rem;
   margin: .8rem;
   height: fit-content;
-  box-shadow: 5px 5px 15px grey;
+  box-shadow: 5px 5px 10px grey;
   cursor: pointer;
   border-radius: 5px;
 }

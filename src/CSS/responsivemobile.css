@@ -23,9 +23,9 @@
     /* Cardsec */
 
     .cardsec {
-        width: 16rem;
-        display: block;
-        margin: 5% auto;
+        width: 16rem !important;
+        display: block !important;
+        margin: 5% auto !important;
     }
 
     /* Bestseller */

@@ -4,15 +4,15 @@ import "../CSS/responsivemobile.css"
 import img1 from "../images/book 1 new release.jpg"
 import img2 from "../images/book 3 new release.jpeg"
 import img3 from "../images/book 4 new release.jpg"
-export default function CardSec() {
+export default function CardSec(props) {
     return (
-        <div className='container-fluid'>
+        <div className='container-fluid' >
             <div className='newRele'>
                 <h2 className='title'>New Release</h2>
                 <hr />
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum odio quis delectus fugiat repudiandae odit.</p>
                 <div className="row">
-                    <div className="cardsec col-md-4">
+                    <div className="cardsec col-md-4" style={{backgroundColor:props.mode==='dark'?'#333333':'white'}}>
                         <div className="row g-0">
                             <div className="col-md-4">
                                 <img src={img1} className="img-fluid rounded-start" alt="..." />
@@ -27,7 +27,7 @@ export default function CardSec() {
                             </div>
                         </div>
                     </div>
-                    <div className="cardsec col-md-4">
+                    <div className="cardsec col-md-4" style={{backgroundColor:props.mode==='dark'?'#333333':'white'}}>
                         <div className="row g-0">
                             <div className="col-md-4">
                                 <img src={img2} className="img-fluid rounded-start" alt="..." />
@@ -42,7 +42,7 @@ export default function CardSec() {
                             </div>
                         </div>
                     </div>
-                    <div className="cardsec col-md-4 ">
+                    <div className="cardsec col-md-4 " style={{backgroundColor:props.mode==='dark'?'#333333':'white'}}>
                         <div className="row g-0">
                             <div className="col-md-4">
                                 <img src={img3} className="img-fluid rounded-start" alt="..." />

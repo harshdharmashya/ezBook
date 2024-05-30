@@ -5,10 +5,9 @@ import img3 from '../images/book 4 new release.jpg'
 import "../CSS/Carasole.css"
 import "../CSS/responsivemobile.css"
 
-export default function Carousel() {
+export default function Carousel(props) {
   return (
     <>
-      
       <div className='bgimg'>
         <div className="col-md-6">
           <h2 className='headline'><strong>S</strong>TART YOUR READING <span>ADVENTURE</span> INVEST IN BOOK TODAY</h2>
@@ -30,14 +29,6 @@ export default function Carousel() {
               <img src={img3} className="d-block w-100 imgcar" alt="..." />
             </div>
           </div>
-          <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-            <span className="carousel-control-prev-icon-hidden" aria-hidden="true"></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-            <span className="carousel-control-next-icon-hidden" aria-hidden="true"></span>
-            <span className="visually-hidden">Next</span>
-          </button>
         </div>
       </div>
     </>
