@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+  }
+  
+  .left {
+    padding: 5%;
+    width: 100%;
+  }
+  .left img{
+    height: 500px;
+  }
+  
+  .right {
+    padding: 4%;
+  }
+  .right h1{
+    display: block;
+    margin: auto;
+    width: fit-content;
+  }
+  .right button{
+    display: block;
+    margin: auto;
+    width: 200px;
+    margin-top: 20px;
+  }
+  .right p{
+    display: block;
+    margin: auto;
+    width: 80%;
+    margin-top: 40px;
+  }
+  .right h3{
+    display: block;
+    margin: auto;
+    width: 100px;
+    margin-top: 40px;
+  }
+  
+  .responsive-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .responsive-text {
+    font-size: 16px; /* Adjust font size as needed */
+    /* Add other styles for responsiveness */
+  }

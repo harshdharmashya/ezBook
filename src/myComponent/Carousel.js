@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import img1 from '../images/Carasol book 1.jpg'
 import img2 from '../images/Carasol book 2.jpg'
 import img3 from '../images/book 4 new release.jpg'

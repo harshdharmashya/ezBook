@@ -3,6 +3,7 @@
 }
 .cardsinbest{
     margin: 5%;
+    row-gap: 20px;
 }
 .cardbestseller{
     width: auto;
@@ -15,11 +16,34 @@
     transform: scale(1.1);
     transition: .7s;
 }
-.active{
-    cursor: pointer;
+.outerTab ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
 }
-.active:hover{
-    background-color: black;
-    color: white;
+.outerTab ul li button{
+    cursor: pointer;
+    border: none;
+    padding: 5px;
     border-radius: 5px;
 }
+.active{
+    background-color: rgba(155, 145, 145, 0.55) !important;
+
+}
+.buttonreadcart{
+    display: flex;
+}
+.btn1{
+    flex-basis: 50%;
+}
+.view{
+    margin: 0;
+    text-decoration-line: none;
+    flex-basis: 40%;
+}
+p{
+    margin-bottom: 0px;
+}
+

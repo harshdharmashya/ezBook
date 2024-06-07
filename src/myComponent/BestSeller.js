@@ -1,72 +1,63 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "../CSS/Bestseller.css"
 import "../CSS/responsivemobile.css"
-import img1 from "../images/book 1 new release.jpg"
-import img2 from "../images/book 3 new release.jpeg"
-import img3 from "../images/book 4 new release.jpg"
-import img4 from "../images/mb3.jpg"
+import { Link } from "react-router-dom"
 
 export default function BestSeller(props) {
+  const Bestbooks = props.BestSellerbooks;
+
+  var True = true;
+  var False = false;
+  var isPresent = isPresent;
+  const [show, setShow] = useState(true);
+  const [cart, setCart] = useState([]);
+  const handleClick = (item) => {
+    isPresent = False;
+    cart.forEach((Bestbooks) => {
+      if (item.id === Bestbooks.id)
+        isPresent = true;
+    })
+    if (isPresent)
+      return;
+    setCart([...cart,item])
+  }
   return (
     <div>
       <div className='bestseller'>
         <h2 className='title'>Best Seller</h2>
         <hr />
-        <div className="row">
-          <div className="col-md-1 active">All here</div>
-          <div className="col-md-1 active">Fictions</div>
-          <div className="col-md-1 active">Biography</div>
-          <div className="col-md-1 active">History</div>
-          <div className="col-md-2 active">Graphic Design</div>
-          <div className="col-md-4 active">All Categories</div>
+        <div className='outerTab'>
+          <ul>
+            <li><button className='active' style={{ color: props.mode === 'light' ? 'rgba(0,0,0,.55)' : 'rgba(255, 255, 255, .55)', backgroundColor: props.mode === 'light' ? 'white' : 'black' }}>All here</button></li>
+            <li><button style={{ color: props.mode === 'light' ? 'rgba(0,0,0,.55)' : 'rgba(255, 255, 255, .55)', backgroundColor: props.mode === 'light' ? 'white' : 'black' }}>Fictions</button></li>
+            <li><button style={{ color: props.mode === 'light' ? 'rgba(0,0,0,.55)' : 'rgba(255, 255, 255, .55)', backgroundColor: props.mode === 'light' ? 'white' : 'black' }}>Biography</button></li>
+            <li><button style={{ color: props.mode === 'light' ? 'rgba(0,0,0,.55)' : 'rgba(255, 255, 255, .55)', backgroundColor: props.mode === 'light' ? 'white' : 'black' }}>History</button></li>
+            <li><button style={{ color: props.mode === 'light' ? 'rgba(0,0,0,.55)' : 'rgba(255, 255, 255, .55)', backgroundColor: props.mode === 'light' ? 'white' : 'black' }}>Graphic Design</button></li>
+            <li><button style={{ color: props.mode === 'light' ? 'rgba(0,0,0,.55)' : 'rgba(255, 255, 255, .55)', backgroundColor: props.mode === 'light' ? 'white' : 'black' }}>Cateory</button></li>
+          </ul>
         </div>
         <div className="row cardsinbest">
-          <div className="col-md-3">
-            <div className="card cardbestseller" style={{backgroundColor:props.mode==='dark'?'#31363a':'white'}}>
-              <img src={img1} className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h5 className="card-title">Name of Book</h5>
-                <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, sapiente.</p>
-                <h5>Rs.1200</h5>
-                <p className="btn"><small typeof='button'>Add to cart</small></p>
+          {
+            Bestbooks.map((dataB, i) => (
+              <div className="col-md-3" key={i}>
+                <div className="card cardbestseller" style={{ backgroundColor: props.mode === 'dark' ? '#31363a' : 'white' }}>
+                  <img src={dataB?.image} className="card-img-top" alt="..." />
+                  <div className="card-body">
+                    <h5 className="card-title">{dataB?.name}</h5>
+                    <p className="card-text">{dataB?.desc}</p>
+                    <h5>Rs.{dataB?.price}</h5>
+                    <div className='buttonreadcart'>
+                      <Link className="btn view" to={`/Bestseller/${dataB.id}`} state={dataB}><p ><small typeof='button'>View</small></p></Link>
+                      <button className='btn btn1' onClick={() => handleClick(dataB)}>Add to Cart</button>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div className="col-md-3">
-            <div className="card cardbestseller" style={{backgroundColor:props.mode==='dark'?'#333333':'white'}}>
-              <img src={img2} className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h5 className="card-title">Name of Book</h5>
-                <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, sapiente.</p>
-                <h5>Rs.1200</h5>
-                <p className="btn"><small typeof='button'>Add to cart</small></p>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-3">
-            <div className="card cardbestseller" style={{backgroundColor:props.mode==='dark'?'#333333':'white'}}>
-              <img src={img3} className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h5 className="card-title">Name of Book</h5>
-                <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, sapiente.</p>
-                <h5>Rs.1200</h5>
-                <p className="btn"><small typeof='button'>Add to cart</small></p>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-3">
-            <div className="card cardbestseller" style={{backgroundColor:props.mode==='dark'?'#333333':'white'}}>
-              <img src={img4} className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h5 className="card-title">Name of Book</h5>
-                <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, sapiente.</p>
-                <h5>Rs.1200</h5>
-                <p className="btn"><small typeof='button'>Add to cart</small></p>
-              </div>
-            </div>
-          </div>
+            ))
+          }
         </div>
       </div>
+      <Link to='../AddtoCart'><button className='addcardicon'><i className="fa-solid fa-cart-shopping"></i><p className='cartcount'>{cart.length}</p></button></Link>
     </div>
   )
 }

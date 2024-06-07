@@ -44,4 +44,8 @@
         margin-left: 0px !important;
         margin: 3%;
     }
+    /* bookDetails */
+    .container{
+        flex-wrap: wrap !important;
+    }
 }

@@ -1,0 +1,59 @@
+.modaloverlap{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 100;
+}
+.modaloverShow{
+    display: block;
+}
+.modalDiv{
+    width: 320px;
+    height: auto;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    top: -50%;
+    transition: .8sec;
+    z-index: 100;
+    padding: 2%;
+}
+.modeldivShow{
+    top: 50%;
+}
+.loginForm{
+    padding: 5%;
+}
+.btn{
+    display: block;
+    margin: auto;
+    padding: 2%;
+}
+.loginForm input{
+    margin: 5%;
+    padding: 2%;
+}
+.loginbtn{
+    border: none;
+}
+.cross{
+    position: fixed;
+    right: 13px;
+    top: 15px;
+    border: none;
+}
+.loginlink{
+    text-decoration-line: none;
+    font-size: 12px;
+}
+.linkmanage{
+    display: flex;
+}
+.linkmanage button{
+   border: none;
+   margin: 5px;
+   margin-left: 13px;
+}
