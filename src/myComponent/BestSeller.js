@@ -5,22 +5,22 @@ import { Link } from "react-router-dom"
 
 export default function BestSeller(props) {
   const Bestbooks = props.BestSellerbooks;
-
-  var True = true;
-  var False = false;
-  var isPresent = isPresent;
-  const [show, setShow] = useState(true);
-  const [cart, setCart] = useState([]);
-  const handleClick = (item) => {
-    isPresent = False;
-    cart.forEach((Bestbooks) => {
-      if (item.id === Bestbooks.id)
-        isPresent = true;
-    })
-    if (isPresent)
-      return;
-    setCart([...cart,item])
-  }
+  
+  // var True = true;
+  // var False = false;
+  // var isPresent = isPresent;
+  // const [show, setShow] = useState(true);
+  // const [cart, setCart] = useState([]);
+  // const handleClick = (item) => {
+  //   isPresent = False;
+  //   cart.forEach((Bestbooks) => {
+  //     if (item.id === Bestbooks.id)
+  //       isPresent = true;
+  //   })
+  //   if (isPresent)
+  //     return;
+  //   setCart([...cart,item])
+  // }
   return (
     <div>
       <div className='bestseller'>
@@ -48,7 +48,7 @@ export default function BestSeller(props) {
                     <h5>Rs.{dataB?.price}</h5>
                     <div className='buttonreadcart'>
                       <Link className="btn view" to={`/Bestseller/${dataB.id}`} state={dataB}><p ><small typeof='button'>View</small></p></Link>
-                      <button className='btn btn1' onClick={() => handleClick(dataB)}>Add to Cart</button>
+                      <button className='btn btn1' onClick={() => props.handleClick(dataB)}>Add to Cart</button>
                     </div>
                   </div>
                 </div>
@@ -57,7 +57,12 @@ export default function BestSeller(props) {
           }
         </div>
       </div>
-      <Link to='../AddtoCart'><button className='addcardicon'><i className="fa-solid fa-cart-shopping"></i><p className='cartcount'>{cart.length}</p></button></Link>
+      <Link to='' state={props.cart}>
+        <button className='addcardicon' onClick={()=>props.setshow(false)}>
+          <i className="fa-solid fa-cart-shopping"></i>
+            <p className='cartcount'>{props.cart.length}</p>
+        </button>
+      </Link>
     </div>
   )
 }

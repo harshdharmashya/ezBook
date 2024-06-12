@@ -1,28 +1,13 @@
 import {React,useState} from 'react'
 import "../CSS/bookDetails.css"
 import "../CSS/responsivemobile.css"
-import { useLocation,Link } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 
 export default function BookDetails(props) {
     const location = useLocation();
-    console.log(location);
+
     let currentData = location.state
 
-    var True = true;
-    var False = false;
-    var isPresent = isPresent;
-    const[show,setShow]=useState(true);
-    const[cart,setCart] =useState([]);
-    const handleClick = (item)=>{
-        isPresent = False;
-        cart.forEach((currentData)=>{
-            if(item.id===currentData.id)
-                isPresent =true;
-        })
-        if(isPresent)
-            return;
-        setCart([...cart,item])
-    }
     return (
         <>
             <div className="container">
@@ -40,10 +25,10 @@ export default function BookDetails(props) {
                     <h3>
                         Rs.{currentData.price}
                     </h3>
-                    <button className='btn' onClick={(item)=>handleClick()}>Add to Cart</button>
+                    <h3>Summary..</h3>
+                    <p  className="responsive-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi libero similique labore, repellat dolor nemo facere, asperiores quia praesentium, tempore dolores veniam maxime quas ducimus. Animi beatae ipsum sequi, iusto neque reprehenderit. Ab totam, iusto exercitationem voluptates vel sint rem beatae a labore autem repudiandae ex porro corporis, natus voluptatibus?</p>
                 </div>
             </div>
-            <Link to='../AddtoCart'><button className='addcardicon'><i class="fa-solid fa-cart-shopping"></i><p className='cartcount'>{cart.length}</p></button></Link>
         </>
     )
 }
