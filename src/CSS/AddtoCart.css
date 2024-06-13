@@ -4,3 +4,15 @@
 .imagadd{
     height: 80px;
 }
+.backbtn{
+    position: fixed;
+    right: 5%;
+    bottom: 10%;
+    border: 2px solid black;
+    padding: 14px;
+    box-shadow: 0px 0px 8px;
+    z-index: 99;
+  }
+  .backbtn:hover{
+    scale: 1.1;
+  }

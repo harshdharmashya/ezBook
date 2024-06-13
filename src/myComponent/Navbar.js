@@ -12,7 +12,7 @@ export default function Navbar(props) {
     <div >
       <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">{props.title}</a>
+          <a className="navbar-brand" href="/">{props.title}</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -41,7 +41,7 @@ export default function Navbar(props) {
         <button className="cross" style={{color:props.mode==='light'?'rgba(0,0,0,.55)':'rgba(255, 255, 255, .55)',backgroundColor:props.mode==='light'?'#f8f9fa':'#212529'}} onClick={() => setmodelStatus(!modal)}>&#10006;</button>
         <form action="" className="loginForm">
           <div className="alert alert-warning" role="alert">
-            A simple warning alert—check it out!
+            
           </div>
           <input type="text" placeholder="Your Name" />
           <input type="password" placeholder="Password" /> <br />

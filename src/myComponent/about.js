@@ -3,7 +3,7 @@ import "../CSS/about.css"
 import "../CSS/responsivemobile.css"
 import img1 from "../images/author.png"
 import { Link } from "react-router-dom"
-import Navbar from './Navbar'
+
 
 export default function about(props) {
   return (
@@ -18,7 +18,7 @@ export default function about(props) {
         <div className="container row">
             <div className="image-container col-md-6">
                 <img src={img1} alt=""/>
-                <p className="paragraph">All Books › <a href="">main page</a></p>
+                <p className="paragraph">All Books › <a href="/">main page</a></p>
 
             </div>
             <div className="text-container col-md-6">

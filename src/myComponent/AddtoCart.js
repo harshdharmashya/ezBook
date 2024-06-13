@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 // import { useLocation } from 'react-router-dom'
 import '../CSS/AddtoCart.css'
 import '../CSS/Bestseller.css'
-import { useSelector, useDispatch } from 'react-redux'
-import { decrement, increment } from '../redux/Cart/cartslice'
+
 
 export default function AddtoCart({ cart, setCart, setshow, handlechange, amtprice, setamtprice,mode}) {
     // const location = useLocation();
@@ -64,7 +63,7 @@ export default function AddtoCart({ cart, setCart, setshow, handlechange, amtpri
                     </tbody>
                 </table>
                 <span>Rs.{amtprice}</span>
-                <button className='btn p-1' onClick={() => setshow(true)}>Go Back</button>
+                <button className='btn p-1 backbtn' onClick={() => setshow(true)}>Go Back</button>
             </section>
         </>
     )

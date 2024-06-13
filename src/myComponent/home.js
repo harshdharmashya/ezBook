@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState } from 'react'
 import Navbar from "./Navbar"
 import Carousel from "./Carousel"
 import CardSec from "./CardSec"
@@ -96,7 +96,7 @@ function Home(props) {
     ]
     const macrobioticBooks = [
         {
-            id: 7,
+            id: 1,
             image: img1,
             name: "The Little Mermaid",
             price: 1299,
@@ -105,7 +105,7 @@ function Home(props) {
         
         },
         {
-            id: 8,
+            id: 2,
             image: img2,
             name: "SOUL",
             price: 1199,
@@ -121,7 +121,7 @@ function Home(props) {
             quantity: 1
         },
         {
-            id: 10,
+            id: 3,
             image: img4,
             name: "Invisible Man",
             price: 1399,
@@ -129,7 +129,7 @@ function Home(props) {
             quantity: 1
         },
         {
-            id: 11,
+            id: 4,
             image: img5,
             name: "Jurassic Park",
             price: 1199,
@@ -145,7 +145,7 @@ function Home(props) {
             quantity: 1
         },
         {
-            id: 13,
+            id: 5,
             image: img7,
             name: "I'll Find You",
             price: 1499,
@@ -153,7 +153,7 @@ function Home(props) {
             quantity: 1
         },
         {
-            id: 14,
+            id: 6,
             image: img8,
             name: "SOUL",
             price: 1099,

@@ -21,7 +21,6 @@ export default function CardSec(props) {
                                 <div className="card-body">
                                     <h5 className="card-title">Name of Book</h5>
                                     <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, sapiente.</p>
-                                    <h5>Rs.1200</h5>
                                     <p className="btn"><small typeof='button'>Latest</small></p>
                                 </div>
                             </div>
@@ -36,7 +35,6 @@ export default function CardSec(props) {
                                 <div className="card-body">
                                     <h5 className="card-title">Name of Book</h5>
                                     <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, sapiente.</p>
-                                    <h5>Rs.1200</h5>
                                     <p className="btn"><small typeof='button'>Latest</small></p>
                                 </div>
                             </div>
@@ -51,7 +49,6 @@ export default function CardSec(props) {
                                 <div className="card-body">
                                     <h5 className="card-title">Name of Book</h5>
                                     <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, sapiente.</p>
-                                    <h5>Rs.1200</h5>
                                     <p className="btn"><small typeof='button'>Latest</small></p>
                                 </div>
                             </div>

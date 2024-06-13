@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import "../CSS/Bestseller.css"
 import "../CSS/responsivemobile.css"
 import { Link } from "react-router-dom"
@@ -6,21 +6,6 @@ import { Link } from "react-router-dom"
 export default function BestSeller(props) {
   const Bestbooks = props.BestSellerbooks;
   
-  // var True = true;
-  // var False = false;
-  // var isPresent = isPresent;
-  // const [show, setShow] = useState(true);
-  // const [cart, setCart] = useState([]);
-  // const handleClick = (item) => {
-  //   isPresent = False;
-  //   cart.forEach((Bestbooks) => {
-  //     if (item.id === Bestbooks.id)
-  //       isPresent = true;
-  //   })
-  //   if (isPresent)
-  //     return;
-  //   setCart([...cart,item])
-  // }
   return (
     <div>
       <div className='bestseller'>

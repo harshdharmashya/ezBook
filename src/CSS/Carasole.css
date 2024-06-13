@@ -41,6 +41,9 @@
     color: gray;
     border: 1px solid gray;
 }
+.btnsearch{
+    margin: 0px;
+}
 .btn:hover{
     box-shadow: 5px 5px 10px grey;
 }
@@ -67,4 +70,7 @@
     border-radius: 50%;
   }
 @media screen and (min-width:768px) and (max-width :1023px) {
+    .btnsearch{
+        margin: auto ;
+    }
 }

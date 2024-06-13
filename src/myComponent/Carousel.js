@@ -14,7 +14,7 @@ export default function Carousel(props) {
           <p className='loremline'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam fugiat, laboriosam vel dolor nam illum similique neque ullam animi possimus ex.</p>
           <form className="d-flex">
             <input className="form-control mx-4 search" type="search" placeholder="Search" aria-label="Search" />
-            <button className="btn m-0" type="submit">Search</button>
+            <button className="btn btnsearch" type="submit">Search</button>
           </form>
         </div>
         <div id="carouselExampleControls col-md-6" className="carousel1st slide" data-bs-ride="carousel">

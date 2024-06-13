@@ -15,6 +15,7 @@ import React, { useState } from 'react';
 function App() {
   
   const [mode, setMode] = useState('light');
+  // console.log(process.env.REACT_APP_EZBOOK_CODE)
   return (
     <>
       
