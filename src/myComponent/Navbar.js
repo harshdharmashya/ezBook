@@ -4,7 +4,7 @@ import "../CSS/Modal.css"
 import {NotificationContainer, NotificationManager} from 'react-notifications';
 
 export default function Navbar(props) {
-  const [modal, setmodelStatus] = React.useState(false);
+
   let showNotifications=()=>{
     NotificationManager.success("Done")
   }
@@ -24,9 +24,16 @@ export default function Navbar(props) {
               <li className="nav-item">
                 <Link className="nav-link" aria-current="page" to="About">About</Link>
               </li>
+              {props.isAuthenticated ? 
               <li className="nav-item">
-                <button className={`nav-link loginbtn`} style={{color:props.mode==='light'?'rgba(0,0,0,.55)':'rgba(255, 255, 255, .55)',backgroundColor:props.mode==='light'?'#f8f9fa':'#212529'}} onClick={() => setmodelStatus(!modal)}>Login</button>
+                <button className={`nav-link loginbtn`} style={{color:props.mode==='light'?'rgba(0,0,0,.55)':'rgba(255, 255, 255, .55)',backgroundColor:props.mode==='light'?'#f8f9fa':'#212529'}} onClick={() => props.logout({ logoutParams: { returnTo: window.location.origin } })}>Logout</button>
+                {/* <button className={`nav-link loginbtn`} style={{color:props.mode==='light'?'rgba(0,0,0,.55)':'rgba(255, 255, 255, .55)',backgroundColor:props.mode==='light'?'#f8f9fa':'#212529'}} onClick={()=>props.setprofile(false)}>Profile</button> */}
               </li>
+               :
+              <li className="nav-item">
+                <button className={`nav-link loginbtn`} style={{color:props.mode==='light'?'rgba(0,0,0,.55)':'rgba(255, 255, 255, .55)',backgroundColor:props.mode==='light'?'#f8f9fa':'#212529'}} onClick={() => props.loginWithRedirect()} >Login</button>
+              </li>
+              }
             </ul>
             <div className={`form-check form-switch text-${props.mode === 'light' ? 'dark' : 'light'}`}>
               <input className="form-check-input" onChange={() => props.toggleMode()} type="checkbox" id="flexSwitchCheckDefault" />
@@ -35,23 +42,6 @@ export default function Navbar(props) {
           </div>
         </div>
       </nav>
-      <div className={`modaloverlap ${modal ? 'modaloverShow' : ''}`}></div>
-      <div className={`modalDiv ${modal ? 'modeldivShow' : ''}`} style={{color:props.mode==='light'?'rgba(0,0,0,.55)':'white',backgroundColor:props.mode==='light'?'#f8f9fa':'#212529'}}>
-        <h3>Login</h3>
-        <button className="cross" style={{color:props.mode==='light'?'rgba(0,0,0,.55)':'rgba(255, 255, 255, .55)',backgroundColor:props.mode==='light'?'#f8f9fa':'#212529'}} onClick={() => setmodelStatus(!modal)}>&#10006;</button>
-        <form action="" className="loginForm">
-          <div className="alert alert-warning" role="alert">
-            
-          </div>
-          <input type="text" placeholder="Your Name" />
-          <input type="password" placeholder="Password" /> <br />
-          <div className="linkmanage">
-            <button  style={{color:props.mode==='light'?'rgba(0,0,0,.55)':'rgba(255, 255, 255, .55)',backgroundColor:props.mode==='light'?'#f8f9fa':'#212529'}}><Link className="loginlink" to=''>Forgot Password</Link></button>
-            <button style={{color:props.mode==='light'?'rgba(0,0,0,.55)':'rgba(255, 255, 255, .55)',backgroundColor:props.mode==='light'?'#f8f9fa':'#212529'}}><Link className="loginlink" to=''>Sign up</Link></button>
-          </div>
-          <button className="btn" onClick={showNotifications}>Submit</button>
-        </form>
-      </div>
           <NotificationContainer/>
     </div>
   )

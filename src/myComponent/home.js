@@ -7,6 +7,7 @@ import Flashseller from './Flashseller';
 import Macrobiotic from './Macrobiotic';
 import Footer from './Footer';
 import AddtoCart from '../myComponent/AddtoCart';
+import Profile from './Profile'
 import {NotificationContainer, NotificationManager} from 'react-notifications';
 
 import img1 from "../images/mb1.jpg"
@@ -23,6 +24,7 @@ function Home(props) {
 
     const [cart, setCart] = useState([]);
     const [show, setshow] = useState(true);
+    const[profile,setprofile] =useState(true);
     const [amtprice, setamtprice] = useState(0)
 
     const toggleMode = () => {
@@ -163,6 +165,7 @@ function Home(props) {
     ]
 
     const handleClick = (item) => {
+        if (props.isAuthenticated){
         let isPresent = false;
         cart.forEach((Bestbooks) => {
             if (item.id === Bestbooks.id)
@@ -174,6 +177,9 @@ function Home(props) {
         }
         NotificationManager.success("Added successfully",'', 1000)
         setCart([...cart, item]);
+    }else{
+        NotificationManager.error("Make sure you must be logged in first",'', 2000)
+    }
     }
 
     const handlechange = (index,d) => {
@@ -185,14 +191,12 @@ function Home(props) {
         setCart([...carts])
     }
     
-
-
     return (
         <>
         {
             show ?
             <div>
-                <Navbar title="ezBook" mode={mode} toggleMode={() => toggleMode()} />
+                <Navbar title="ezBook" mode={mode} toggleMode={() => toggleMode()} loginWithRedirect={props.loginWithRedirect} logout={props.logout} isAuthenticated={props.isAuthenticated} setprofile={setprofile}/>
                 <Carousel />
                 <CardSec mode={mode} />
                 <BestSeller mode={mode} BestSellerbooks={BestSellerbooks} handleClick={handleClick} cart={cart} show={show} setshow={setshow}/>
