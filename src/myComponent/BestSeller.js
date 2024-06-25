@@ -42,6 +42,7 @@ export default function BestSeller(props) {
           }
         </div>
       </div>
+      {/* add to cart icon  */}
       <Link to='' state={props.cart}>
         <button className='addcardicon' onClick={()=>props.setshow(false)}>
           <i className="fa-solid fa-cart-shopping"></i>

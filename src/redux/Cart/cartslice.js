@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice,nanoid } from '@reduxjs/toolkit'
 
 const initialState = {
   value: 0,
@@ -14,6 +14,7 @@ export const cartslice = createSlice({
   reducers: {
     increment: (state) => {
       state.value += 1
+      // state.value.push(counter)      set State
     },
     decrement: (state) => {
       state.value -= 1

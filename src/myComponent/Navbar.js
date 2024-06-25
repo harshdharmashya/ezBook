@@ -27,7 +27,6 @@ export default function Navbar(props) {
               {props.isAuthenticated ? 
               <li className="nav-item">
                 <button className={`nav-link loginbtn`} style={{color:props.mode==='light'?'rgba(0,0,0,.55)':'rgba(255, 255, 255, .55)',backgroundColor:props.mode==='light'?'#f8f9fa':'#212529'}} onClick={() => props.logout({ logoutParams: { returnTo: window.location.origin } })}>Logout</button>
-                {/* <button className={`nav-link loginbtn`} style={{color:props.mode==='light'?'rgba(0,0,0,.55)':'rgba(255, 255, 255, .55)',backgroundColor:props.mode==='light'?'#f8f9fa':'#212529'}} onClick={()=>props.setprofile(false)}>Profile</button> */}
               </li>
                :
               <li className="nav-item">

@@ -1,14 +1,32 @@
-import React from 'react'
+import React,{useState} from 'react'
+import axios from "axios"
 import "../CSS/Footer.css"
 export default function Footer(props) {
+    const [email,setEmail]= useState('');
+    const [phone,setPhone]= useState('');
+    const [message,setMessage]= useState('');
+
+    const handleSubmit=(e)=>{
+        e.preventDefault();
+        const data ={
+            Email :email,
+            Phone : phone,
+            Message : message
+        }
+        axios.post('https://sheet.best/api/sheets/9a1ee447-d3a4-4794-8317-8c27b50d03d0',data).then((response)=>{
+            setEmail('')
+            setPhone('')
+            setMessage('')
+        })
+    }
     return (
         <div>
             <div className="kir">
                 <div className="col-md-4 p-5">
-                    <form action="">
-                        <input className="m-2 border p-1 inpemail" type="text" placeholder='Enter Email' /><br />
-                        <input className="m-2 border p-1 inpemail" type="text" placeholder='Enter Phone no.' /><br />
-                        <input className="m-2 border p-1 inpemail height" type="text" placeholder='Enter your message' /> <br />
+                    <form onSubmit={handleSubmit}>
+                        <input className="m-2 border p-1 inpemail" placeholder='Enter Email' type="text" onChange={(e)=>setEmail(e.target.value)} value={email}/><br />
+                        <input className="m-2 border p-1 inpemail" placeholder='Enter Phone no.' type="text" onChange={(e)=>setPhone(e.target.value)} value={phone}/><br />
+                        <input className="m-2 border p-1 inpemail height" placeholder='Enter your message' type="text" onChange={(e)=>setMessage(e.target.value)} value={message}/> <br />
                         <button className='btn mx-5 my-3' type='submit'>Submit</button>
                     </form>
                 </div>

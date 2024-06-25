@@ -17,7 +17,7 @@ function App() {
   
   const [mode, setMode] = useState('light');
     const { loginWithRedirect,logout,isAuthenticated,user } = useAuth0();
-  // console.log(process.env.REACT_APP_EZBOOK_CODE)
+
   return (
     <>
       

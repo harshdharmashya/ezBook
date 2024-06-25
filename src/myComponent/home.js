@@ -7,7 +7,7 @@ import Flashseller from './Flashseller';
 import Macrobiotic from './Macrobiotic';
 import Footer from './Footer';
 import AddtoCart from '../myComponent/AddtoCart';
-import Profile from './Profile'
+// import Profile from './Profile'
 import {NotificationContainer, NotificationManager} from 'react-notifications';
 
 import img1 from "../images/mb1.jpg"
@@ -166,19 +166,20 @@ function Home(props) {
 
     const handleClick = (item) => {
         if (props.isAuthenticated){
-        let isPresent = false;
-        cart.forEach((Bestbooks) => {
-            if (item.id === Bestbooks.id)
-                isPresent = true;
-        })
-        if (isPresent){
-            NotificationManager.warning("Already Added",'', 1000)
-            return;
-        }
-        NotificationManager.success("Added successfully",'', 1000)
-        setCart([...cart, item]);
-    }else{
-        NotificationManager.error("Make sure you must be logged in first",'', 2000)
+            let isPresent = false;
+            cart.forEach((Bestbooks) => {
+                // click cart id = array cart data
+                if (item.id === Bestbooks.id)  
+                    isPresent = true;
+            })
+            if (isPresent){
+                NotificationManager.warning("Already Added",'', 1000)
+                return;
+            }
+            NotificationManager.success("Added successfully",'', 1000)
+            setCart([...cart, item]);
+        }else{
+        NotificationManager.error("You need to log in to access this feature.",'', 2000)
     }
     }
 
@@ -196,7 +197,7 @@ function Home(props) {
         {
             show ?
             <div>
-                <Navbar title="ezBook" mode={mode} toggleMode={() => toggleMode()} loginWithRedirect={props.loginWithRedirect} logout={props.logout} isAuthenticated={props.isAuthenticated} setprofile={setprofile}/>
+                <Navbar title="ezBook" profile={profile} mode={mode} toggleMode={() => toggleMode()} loginWithRedirect={props.loginWithRedirect} logout={props.logout} isAuthenticated={props.isAuthenticated} setprofile={setprofile}/>
                 <Carousel />
                 <CardSec mode={mode} />
                 <BestSeller mode={mode} BestSellerbooks={BestSellerbooks} handleClick={handleClick} cart={cart} show={show} setshow={setshow}/>
