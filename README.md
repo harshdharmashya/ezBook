@@ -1,72 +1,71 @@
-# Getting Started with Create React App
+# 📚 ezBook – Online Book Store
 
-To use this project first of all you need to install nodejs in your system and also need to install react tools.
+**ezBook** is a modern, responsive, and user-friendly book ordering web application designed to offer a seamless experience for browsing and ordering books. This project showcases a clean frontend UI built with React and serves as a part of my web development portfolio.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🌐 Live Demo
 
-## Available Scripts
+➡️ [Visit ezBook Live](https://ezbookreact.netlify.app/)
 
-In the project directory, you can run:
+## ✨ Features
 
-### `npm start`
+- 🛍️ **Book Listings**  
+  Explore a curated collection of books with their descriptions and prices.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🛒 **Add to Cart**  
+  Add books to a shopping cart and view your selected items before placing an order.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 🌓 **Dark Mode Toggle**  
+  Switch between light and dark themes for a personalized user experience.
 
-### `npm test`
+- 🔍 **Responsive Design**  
+  Mobile-first, adaptive layout with smooth user experience across all screen sizes.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 💬 **Contact Form**  
+  Users can reach out via an integrated message form — ideal for inquiries or order-related questions.
 
-### `npm run build`
+- 📄 **About Section**  
+  Introduces the purpose and goals of ezBook to build user trust.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Frontend**: React.js  
+- **Routing**: React Router  
+- **Styling**: CSS, Media Queries, Bootstrap
+- **Form Handling**: Google sheet
+- **Deployment**: Netlify
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## 🚀 Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Prerequisites
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Node.js (v16+)
+- npm or yarn
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Setup Instructions
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/harshdharmashya/ezBook.git
+   cd ezBook
+2. Install dependencies:
+   npm install
+3. Run the development server:
+   npm start
 
-## Learn More
+## 💡 Purpose
+This project is part of my frontend portfolio to demonstrate a clean, responsive, and functional user interface for a mock book-ordering platform. It focuses on layout design, navigation, and user interaction through forms.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Crafted with ❤️ by Harsh Dharmashya
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Screen Shots 
+![Screenshot 2025-06-01 174754](https://github.com/user-attachments/assets/8bf6113d-0a99-4538-9d6e-8f13f40fe45c)
+![Screenshot 2025-06-01 174808](https://github.com/user-attachments/assets/7b643c78-15c6-4b6a-9022-fee704ce9e0c)
+![Screenshot 2025-06-01 174828](https://github.com/user-attachments/assets/e3c46351-c65b-48e4-9a78-2f3a45a31219)
+![Screenshot 2025-06-01 174848](https://github.com/user-attachments/assets/f1f2e0db-5e69-4938-9ada-c20be2cb0693)
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
